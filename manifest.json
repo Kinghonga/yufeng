@@ -1,7 +1,7 @@
 {
 	"name": "御风",
 	"version": "1.0.1",
-	"description": "御风，如风一般清爽干净。目前已加入护眼提醒功能",
+	"description": "御风chrome扩展插件，如风一般清爽干净。目前已加入护眼提醒功能",
 	"manifest_version": 2,
 	"permissions": ["notifications","storage","alarms"],
 	"background": {
