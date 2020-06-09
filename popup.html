@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="layui.css">
+    <style>
+       body {width:380px;}
+    </style>
+  </head>
+  <body>
+		  <div class="layui-form-item">
+			  <label class="layui-form-label">间隔(分钟):&nbsp;&nbsp;</label>
+			  <div class="layui-input-inline">
+				<input type="text" id="interval" required lay-verify="required" placeholder="35" autocomplete="off" class="layui-input">
+			  </div>
+		  <div>
+		  <br>
+		<div class="layui-form-item">
+			<label class="layui-form-label">提示文字:&nbsp;&nbsp;</label>
+				<div class="layui-input-inline">
+					<input type="text" id="tips" required lay-verify="required" placeholder="休息一下眼睛吧!" autocomplete="off" class="layui-input">
+				</div>
+		</div>
+
+		<div style="margin-left:20%;">
+			<span>
+				<button type="button" id="setRemindButton" class="layui-btn layui-btn-radius layui-btn-warm layui-btn-sm">设置提醒</button>
+			</span>
+			<span style="margin-left:15%;">
+				<button type="button" id="removeRemindButton" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-sm">取消提醒</button>
+			</span>
+		</div>
+
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
