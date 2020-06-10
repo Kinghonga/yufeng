@@ -42,7 +42,7 @@ function setRestEyeNotification(interval, tip) {
 		var notifOptions = {
 		  type: "basic",
 		  iconUrl: "images/icon48.png",
-		  title: "护眼小插件",
+		  title: "护眼小",
 		  message: tip,
 		  requireInteraction: true,
 		};

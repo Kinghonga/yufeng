@@ -1,3 +1,16 @@
+window.onload = function(){
+	console.log("加载popup.js");
+	 // 保存用户输入的时间间隔和提示到chrome缓存中
+	 chrome.storage.sync.get(['message'], function(res) {
+		 if(res != ''){
+			 // console.log(res.message.tips);
+				// console.log(res.message.interval);
+				$("#interval").val(res.message.interval);
+				$("#tips").val(res.message.tips)
+		 }	
+	 });
+}
+
 // var minute = $("#interval").val();
 // var tips = $("#tips").val();
 let minute = document.getElementById('interval');
@@ -6,16 +19,14 @@ let tips = document.getElementById('tips');
 
 //设置提示
 $("#setRemindButton").click(function () {
-	if(parseInt(minute.value) ==''){
+	if(minute.value ==''){
 		minute.value = 35
 	}
 	if(tips.value ==''){
 		tips.value = "放松一下眼睛吧!";
 	}
-	 //  // 保存用户输入的时间间隔和提示到chrome缓存中
-	 //  chrome.storage.sync.set({'tips':tips,'minute':minute}, function() {
-		// 	console.log('保存成功！');
-	 //  });
+	 
+	 // alert(minute.value+","+tips.value);
 	  var bg = chrome.extension.getBackgroundPage();
 	  bg.setRestEyeNotification(parseInt(minute.value), tips.value);
 });
