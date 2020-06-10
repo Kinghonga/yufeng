@@ -19,7 +19,15 @@ function setRestEyeNotification(interval, tip) {
 	  //periodInMinutes:非null表示alarm周期性执行的时间间隔，单位minute
 	  chrome.alarms.create("restEyeNotification", {when: st,periodInMinutes: interval,});
 	  alert("设置成功，多放松眼睛噢");
-	
+
+	  var message = {
+		  'interval':interval,
+		  'tips':tip
+	  }
+	  chrome.storage.sync.set({'message':message},function(items) {
+			console.log('保存成功！');
+	  });
+
 	  //监听
 	  chrome.alarms.onAlarm.addListener((alarm) => {
 		if (alarm.name != "restEyeNotification") {
@@ -51,3 +59,15 @@ function removeReminder() {
   chrome.alarms.clearAll();
   alert("移除消息提醒成功，有缘再见！");
 };
+
+
+//右键触发生成按钮
+chrome.contextMenus.create({
+	title: '御风：使用百度搜索：%s', // %s表示选中的文字
+	contexts: ['selection'], // 只有当选中文字时才会出现此右键菜单
+	onclick: function(params)
+	{
+		// 注意不能使用location.href，因为location是属于background的window对象
+		chrome.tabs.create({url: 'https://www.baidu.com/s?ie=utf-8&wd=' + encodeURI(params.selectionText)});
+	}
+});

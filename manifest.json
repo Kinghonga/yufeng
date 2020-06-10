@@ -1,22 +1,25 @@
 {
 	"name": "御风",
 	"version": "1.0.1",
-	"description": "御风chrome扩展插件，如风一般清爽干净。目前已加入护眼提醒功能",
+	"description": "御风，一款chrome扩展插件，清爽干净。目前已加入护眼提醒功能，关键字搜索",
 	"manifest_version": 2,
-	"permissions": ["notifications","storage","alarms"],
+	"permissions": ["notifications","storage","alarms","contextMenus"],
 	"background": {
 		"scripts": ["jquery-3.1.1.min.js","background.js"],
 		"persistent": true
-  },
-  "browser_action":
-  {
-      "default_icon": "images/icon16.png",
-      "default_title": "御风小插件",
-      "default_popup": "popup.html"
-  },
+  	},
+	"browser_action":
+	{
+		"default_icon": "images/icon16.png",
+		"default_title": "御风小插件",
+		"default_popup": "popup.html"
+	},
 	"icons": {
 		"16": "images/icon16.png",
 		"48": "images/icon48.png",
 		"128": "images/icon128.png"
 	}
+	,"homepage_url": "https://github.com/Kinghonga"
+	
+	,"options_page": "options.html"
 }
