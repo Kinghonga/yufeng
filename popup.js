@@ -3,8 +3,6 @@ window.onload = function(){
 	 // 保存用户输入的时间间隔和提示到chrome缓存中
 	 chrome.storage.sync.get(['message'], function(res) {
 		 if(res != ''){
-			 // console.log(res.message.tips);
-				// console.log(res.message.interval);
 				$("#interval").val(res.message.interval);
 				$("#tips").val(res.message.tips)
 		 }	
