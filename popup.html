@@ -3,14 +3,50 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="layui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
-       body {width:380px;}
-	   .layui-form-item{
-		   margin-bottom: 0;
+       body {width:220px;}
+		#baiduSearchArea:hover,#eyeNotificationArea:hover{
+			 background-color: lightblue;
+			 border-radius: 5px;
+		}
+		#settingArea:hover,#githubArea:hover,#feedbackArea:hover{
+			color: #0099CC;
+		}
+		
+		.itemClass{
+			height: 30px;
+			line-height: 30px;
+		}
+		.item-textalign-left{
+			text-align: left;
+		}
+		.item-textalign-right{
+			text-align: right;
+		}
+		.item-textalign-center{
+			text-align: center;
+		}
+		.item-margintop{
+			margin-top: 5%;
+		}
+		.item-marginleft{
+			margin-left: 12%;
+		}
+		.item-silver-color{
+			color: #888;
+		}
+		.item-silver2-color{
+			color:silver;
+		}
+		.legend-style{
+			font-size: 12px !important;
+		}
+		   
     </style>
   </head>
   <body>
-		  <div class="layui-form-item">
+		 <!-- <div class="layui-form-item">
 			  <label class="layui-form-label">间隔(分钟):&nbsp;&nbsp;</label>
 			  <div class="layui-input-inline">
 				<input type="text" id="interval" required lay-verify="required" placeholder="35" autocomplete="off" class="layui-input">
@@ -31,8 +67,82 @@
 			<span style="margin-left:15%;">
 				<button type="button" id="removeRemindButton" class="layui-btn layui-btn-radius layui-btn-danger layui-btn-sm">取消提醒</button>
 			</span>
-		</div>
+		</div> -->
+	
 
+
+		<fieldset class="layui-elem-field layui-field-title">
+		    <legend class="legend-style">御风Chrome扩展  <span class="item-silver2-color">v20200611</span></legend>
+		  </fieldset>
+		  
+		  
+		  <div  class="layui-row item-margintop"  id="eyeNotificationArea">
+			  <a href="" id="eyeNotificationBt">
+				  <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+				  		<div class="grid-demo-bg1 itemClass" "></div>
+				  </div>
+				  <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+					<div class="grid-demo-bg1 itemClass item-textalign-right"><i class="fa fa-eye" aria-hidden="true"></i></div>
+				  </div>
+				  <div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
+					<div class="grid-demo-bg1 itemClass item-marginleft">护眼小助手</div>
+				  </div>
+				  <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+					<div class="grid-demo-bg1 itemClass"></div>
+				  </div>
+			  </a>
+		  </div>
+		  
+		 <div  class="layui-row item-margintop"  id="baiduSearchArea">
+				<a href="" id="baiduSearchBt">
+					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
+						 <div class="grid-demo-bg1 itemClass" ></div>
+					</div>
+					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+							<div class="grid-demo-bg1 itemClass item-textalign-right"><i class="fa fa-edge " aria-hidden="true"></i></div>
+					</div>
+					<div class="layui-col-xs6 layui-col-sm6 layui-col-md6" >
+						 <div class="grid-demo-bg1 itemClass item-marginleft">百度搜词</div>
+					</div>
+					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
+						 <div class="grid-demo-bg1 itemClass" ></div>
+					</div>
+				</a>
+		  </div>
+		  
+		  <div  class="layui-row" style="margin-top: 5%;">
+					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
+						 <div class="grid-demo-bg1 itemClass"></div>
+					</div>
+		  			<a href="" id="githubBt">
+						<div class="layui-col-xs3 layui-col-sm3 layui-col-md3 item-silver-color">
+								<div class="grid-demo-bg1 itemClass item-textalign-left" id="githubArea">
+									 <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+								</div>
+						</div>
+					</a>
+					<a href="" id="feedbackBt">
+						<div class="layui-col-xs3 layui-col-sm3 layui-col-md3 item-silver-color">
+								<div class="grid-demo-bg1 itemClass item-textalign-center" id="feedbackArea">
+									<i class="fa fa-dashcube" aria-hidden="true"></i> 反馈
+								</div>
+						</div>
+					</a>
+					<a href="" id="settingBt">
+						<div class="layui-col-xs3 layui-col-sm3 layui-col-md3 item-silver-color" >
+								<div class="grid-demo-bg1 itemClass item-textalign-center" id="settingArea" >
+									<i class="fa fa-cog fa-spin fa-lg fa-fw"></i>设置
+								</div>
+						</div>
+					</a>
+					<div class="layui-col-xs1 layui-col-sm1 layui-col-md1" >
+						 <div class="grid-demo-bg1 itemClass"></div>
+					</div>
+		  				
+		   </div>
+		  
+		  
+		  
     <script src="jquery-3.1.1.min.js"></script>
     <script src="popup.js"></script>
   </body>

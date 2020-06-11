@@ -3,7 +3,7 @@
 	"version": "2020.6.1010",
 	"description": "御风，一款chrome扩展插件，目前已加入护眼助手，右键百度搜词功能",
 	"manifest_version": 2,
-	"permissions": ["notifications","storage","alarms","contextMenus"],
+	"permissions": ["notifications","storage","alarms","contextMenus","bookmarks","tabs"],
 	"background": {
 		"scripts": ["jquery-3.1.1.min.js","background.js"],
 		"persistent": true

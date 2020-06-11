@@ -1,37 +1,30 @@
-window.onload = function(){
-	console.log("加载popup.js");
-	 // 保存用户输入的时间间隔和提示到chrome缓存中
-	 chrome.storage.sync.get(['message'], function(res) {
-		 if(res != ''){
-				$("#interval").val(res.message.interval);
-				$("#tips").val(res.message.tips)
-		 }	
-	 });
-}
 
-// var minute = $("#interval").val();
-// var tips = $("#tips").val();
-let minute = document.getElementById('interval');
-let tips = document.getElementById('tips');
+$("#githubBt").click(function(){
+	chrome.tabs.create({url : 'https://github.com/Kinghonga/yufeng'}, function(tab) {
+	    // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	  });
+})
 
 
-//设置提示
-$("#setRemindButton").click(function () {
-	if(minute.value ==''){
-		minute.value = 35
-	}
-	if(tips.value ==''){
-		tips.value = "放松一下眼睛吧!";
-	}
-	 
-	 // alert(minute.value+","+tips.value);
-	  var bg = chrome.extension.getBackgroundPage();
-	  bg.setRestEyeNotification(parseInt(minute.value), tips.value);
-});
-
-
-//移除提示
-$("#removeRemindButton").click(function () {
-	  var bg = chrome.extension.getBackgroundPage();
-	  bg.removeReminder();
+//打开其他页面
+$("#eyeNotificationBt").click(function () {
+	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/notificationSetting.html'}, function(tab) { 
+	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	    });
+})
+//打开其他页面
+$("#baiduSearchBt").click(function () {
+	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	    });
+})
+$("#settingBt").click(function () {
+	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	    });
+})
+$("#feedbackBt").click(function () {
+	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	    });
 })

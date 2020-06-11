@@ -15,5 +15,7 @@ chrome://extensions/
 
 这个插件会根据设置的间隔推送提醒（如果不设置，默认35分钟推送一次）
 
+### 版本v20200611开发完的效果图
+[v20200611效果图](https://images-cdn.shimo.im/NWYdS7qk3C1mBFUG.gif)
 有兴趣的朋友可以试一下。
 
