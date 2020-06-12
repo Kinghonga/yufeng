@@ -1,30 +1,40 @@
+let ID;
+let githubURL = 'https://github.com/Kinghonga/yufeng';
+window.onload = function(){
+	//获取当前扩展的ID
+	ID = chrome.runtime.id
+	console.log(ID)
+}
 
+//打开Github页面
 $("#githubBt").click(function(){
-	chrome.tabs.create({url : 'https://github.com/Kinghonga/yufeng'}, function(tab) {
+	chrome.tabs.create({url : githubURL}, function(tab) {
 	    // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	  });
 })
 
 
-//打开其他页面
+//打开护眼助手页面
 $("#eyeNotificationBt").click(function () {
-	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/notificationSetting.html'}, function(tab) { 
+	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/notificationSetting.html'}, function(tab) { 
 	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	    });
 })
-//打开其他页面
+//打开百度搜词页面
 $("#baiduSearchBt").click(function () {
-	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/options.html'}, function(tab) { 
 	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	    });
 })
+//打开设置页面
 $("#settingBt").click(function () {
-	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/options.html'}, function(tab) { 
 	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	    });
 })
+//打开反馈页面
 $("#feedbackBt").click(function () {
-	  chrome.tabs.create({url : 'chrome-extension://opcfhnlcdimgbhmfgjdnceagmnpjfink/options.html'}, function(tab) { 
+	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/options.html'}, function(tab) { 
 	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	    });
 })

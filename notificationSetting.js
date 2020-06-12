@@ -1,4 +1,5 @@
 window.onload = function(){
+	//alert("这是notification。js")
 	//获取书签
 	chrome.bookmarks.getTree((res) => {
 		console.log(res);
@@ -27,7 +28,6 @@ $("#setRemindButton").click(function () {
 		tips.value = "放松一下眼睛吧!";
 	}
 	 
-	 // alert(minute.value+","+tips.value);
 	  var bg = chrome.extension.getBackgroundPage();
 	  bg.setRestEyeNotification(parseInt(minute.value), tips.value);
 	  
