@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="layui.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/layui.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
     <style>
        body {width:220px;}
-		#baiduSearchArea:hover,#eyeNotificationArea:hover{
+		#baiduSearchArea:hover,#eyeNotificationArea:hover,#weatherHelperBt:hover{
 			 background-color: lightblue;
 			 border-radius: 5px;
 		}
@@ -82,7 +82,7 @@
 				  		<div class="grid-demo-bg1 itemClass" "></div>
 				  </div>
 				  <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
-					<div class="grid-demo-bg1 itemClass item-textalign-right"><i class="fa fa-eye" aria-hidden="true"></i></div>
+					<div class="grid-demo-bg1 itemClass item-textalign-center"><i class="fa fa-eye" aria-hidden="true"></i></div>
 				  </div>
 				  <div class="layui-col-xs6 layui-col-sm6 layui-col-md6">
 					<div class="grid-demo-bg1 itemClass item-marginleft">护眼小助手</div>
@@ -99,7 +99,7 @@
 						 <div class="grid-demo-bg1 itemClass" ></div>
 					</div>
 					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
-							<div class="grid-demo-bg1 itemClass item-textalign-right"><i class="fa fa-edge " aria-hidden="true"></i></div>
+							<div class="grid-demo-bg1 itemClass item-textalign-center"><i class="fa fa-edge " aria-hidden="true"></i></div>
 					</div>
 					<div class="layui-col-xs6 layui-col-sm6 layui-col-md6" >
 						 <div class="grid-demo-bg1 itemClass item-marginleft">百度搜词</div>
@@ -109,6 +109,23 @@
 					</div>
 				</a>
 		  </div>
+		  
+		  <div  class="layui-row item-margintop"  id="weatherHelperBt">
+		  				<a href="" id="baiduSearchBt">
+		  					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
+		  						 <div class="grid-demo-bg1 itemClass" ></div>
+		  					</div>
+		  					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+		  							<div class="grid-demo-bg1 itemClass item-textalign-center"><i class="fa fa-cloud" aria-hidden="true"></i></div>
+		  					</div>
+		  					<div class="layui-col-xs6 layui-col-sm6 layui-col-md6" >
+		  						 <div class="grid-demo-bg1 itemClass item-marginleft">天气助手</div>
+		  					</div>
+		  					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
+		  						 <div class="grid-demo-bg1 itemClass" ></div>
+		  					</div>
+		  				</a>
+		   </div>
 		  
 		  <div  class="layui-row" style="margin-top: 5%;">
 					<div class="layui-col-xs2 layui-col-sm2 layui-col-md2" >
@@ -140,8 +157,6 @@
 					</div>
 		  				
 		   </div>
-		  
-		  
 		  
     <script src="jquery-3.1.1.min.js"></script>
     <script src="popup.js"></script>

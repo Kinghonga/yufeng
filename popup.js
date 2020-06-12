@@ -26,6 +26,12 @@ $("#baiduSearchBt").click(function () {
 	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
 	    });
 })
+//打开天气助手页面
+$("#weatherHelperBt").click(function () {
+	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/options.html'}, function(tab) { 
+	      // chrome.tabs.executeScript(tab.id, {file: 'src/contentScript2'});
+	    });
+})
 //打开设置页面
 $("#settingBt").click(function () {
 	  chrome.tabs.create({url : 'chrome-extension://'+ID+'/options.html'}, function(tab) { 
