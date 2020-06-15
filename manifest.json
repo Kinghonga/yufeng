@@ -1,9 +1,18 @@
 {
 	"name": "御风",
-	"version": "2020.6.1010",
-	"description": "御风，一款chrome扩展插件，目前已加入护眼助手，右键百度搜词功能",
+	"version": "2020.06.14",
+	"description": "御风，一款chrome扩展插件，目前已加入护眼助手，右键百度搜词功能,御风天气助手",
 	"manifest_version": 2,
-	"permissions": ["notifications","storage","alarms","contextMenus","bookmarks","tabs"],
+	"permissions": [
+		"notifications",
+		"storage",
+		"alarms",
+		"contextMenus",
+		"bookmarks",
+		"tabs",
+		"webRequest",
+		"http://*/*",
+        "https://*/*"],
 	"background": {
 		"scripts": ["jquery-3.1.1.min.js","background.js"],
 		"persistent": true
@@ -11,9 +20,18 @@
 	"browser_action":
 	{
 		"default_icon": "images/yufengicon32.png",
-		"default_title": "御风小插件",
+		"default_title": "御风插件",
 		"default_popup": "popup.html"
 	},
+	"commands": {
+		"toggle-tags": {
+		  "suggested_key": {
+			"default": "Alt+S",
+			"mac": "MacCtrl+S"
+		  },
+		  "description": "Toggle Tags"
+		}
+	  },
 	"icons": {
 		"16": "images/yufengicon16.png",
 		"48": "images/yufengicon32.png",

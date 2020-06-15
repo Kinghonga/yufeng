@@ -1,0 +1,62 @@
+.container{
+    /* background-color: ghostwhite; */
+    width: 75%;
+    margin: 0 auto;
+}
+body{
+    font-family: 'DejaVu Sans Mono';
+    /* background-color: silver; */
+    background: linear-gradient(200deg, #a0cfe4, #e8c37e);
+    background-image: linear-gradient(200deg, rgb(160, 207, 228), rgb(232, 195, 126));
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+
+h1,h2,h3 {
+    font-weight: normal;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+
+#pic{
+    text-align: center;
+    border-bottom: 1px black solid;
+}
+
+#info{
+    height: 60px;
+    border-bottom: 1px black solid;
+    padding-left:0px;
+}
+
+#info li{
+    width: 33.3%;
+    height: 60px;
+    float: left;
+    text-align: center;
+}
+
+#future{
+    clear: both;
+}
+
+#list{
+    height: 200px;
+    /* background-color: ghostwhite; */
+    padding-left:0px;
+}
+
+#list li{
+    width: 20%;
+    float: left;
+    text-align: center;
+}

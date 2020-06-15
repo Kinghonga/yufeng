@@ -1,9 +1,9 @@
 window.onload = function(){
 	//alert("这是notification。js")
 	//获取书签
-	chrome.bookmarks.getTree((res) => {
-		console.log(res);
-	})
+	// chrome.bookmarks.getTree((res) => {
+	// 	console.log(res);
+	// })
 	 // 保存用户输入的时间间隔和提示到chrome缓存中
 	 chrome.storage.sync.get(['message'], function(res) {
 		 if(res != ''){

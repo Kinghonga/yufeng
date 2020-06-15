@@ -70,5 +70,17 @@ function setRestEyeNotification(interval, tip) {
 		}
 	});
 	
+
 	
+	// 输入你想要的网站主页
+	const MainPageUrl = 'http://https://bbs.hupu.com/all-gambia'
+	
+	//快捷键摸鱼监听
+	chrome.commands.onCommand.addListener(function (command) {
+	if (command === 'toggle-tags') {
+		chrome.tabs.create({"url": MainPageUrl, "selected": true});
+	}
+	})
+
+
 
